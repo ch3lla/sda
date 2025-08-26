@@ -26,7 +26,7 @@ A Spring Boot application that simulates, processes, and streams market data ove
    ```
 
 3. **Configure application properties**
-   Edit `src/main/resources/application.yml` (or `.properties`) to adjust:
+   Edit `src/main/resources/application.properties` to adjust:
 
     * WebSocket path
     * CSV export path and interval
@@ -48,7 +48,7 @@ The app will launch on the default port (e.g., `http://localhost:8080`).
 
 ## Connect to the WebSocket
 
-By default, clients can connect to the configured WebSocket path (e.g., `/ws/data`):
+By default, clients can connect to the configured WebSocket path (e.g., `/market-data`):
 
 ```javascript
 const socket = new WebSocket("ws://localhost:8080/market-data");
@@ -83,5 +83,5 @@ If the file does not exist, it is created with headers.
 
 1. Clone the repo
 2. Run `mvn spring-boot:run`
-3. Open a WebSocket client at `ws://localhost:8080/ws/data`
+3. Open a WebSocket client at `ws://localhost:8080/market-data`
 4. Run tests with `mvn test`
